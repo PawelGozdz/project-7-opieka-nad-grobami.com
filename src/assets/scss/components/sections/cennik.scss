@@ -1,0 +1,124 @@
+
+.list {
+  &__item {
+
+    // Loop through rows in table
+    @for $i from 1 through 5 {
+      &--nr#{$i} {
+        @include circle('#{$i}', 20px);
+        width: 100%;
+        text-align: left;
+        
+        &::before {
+          display: none;
+
+          @include breakpoint(medium) {
+            display: flex;
+          }
+        }
+
+      }
+    } 
+  }
+}
+
+.cennik {
+
+  &__row {
+    text-align: right;
+    @include xy-grid;
+    @include xy-cell(12, $breakpoint: small);
+    border-bottom: 1px solid rgba($primary-color, .4);
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: $break-sm;
+    padding-bottom: $break-sm;
+
+    // Table grid
+    .cennik__item {
+
+      &--3 {
+        &:nth-child(1) {
+          text-align: left;
+          @include xy-cell(40%, $breakpoint: small); 
+        }
+        
+        &:nth-child(2),
+        &:nth-child(3) {
+          @include xy-cell(30%, $breakpoint: small);
+        }
+      }
+      
+      &--4 {
+
+        &:nth-child(1) {
+          @include xy-cell(40%, $breakpoint: small); 
+          text-align: left;
+        }
+        
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          @include xy-cell(20%, $breakpoint: small);
+        }
+      }
+
+      &--5 {
+
+        &:nth-child(1) {
+          @include xy-cell(20%, $breakpoint: small); 
+          text-align: left;
+        }
+        
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          @include xy-cell(20%, $breakpoint: small);
+        }
+      }
+
+      &--3,
+      &--4,
+      &--5 {
+        &:not(:first-child) {
+          border-right: 1px solid rgba($primary-color, .4);
+          padding-right: $break-sm;
+        }
+      }
+    }
+  }
+  
+  // small tables
+  &__small {
+    margin-top: $break-xxl;
+    //display: inline-block;
+    
+    @include breakpoint(medium) {
+      margin-top: $break-xxxl;
+    }
+  }
+
+  &__header {
+    background-color: $primary-color;
+    color: $white;
+    font-weight: bold;
+    padding-top: $break-sm;
+    padding-bottom: $break-sm;
+    margin: 0;
+  }
+
+  // .text-bold {
+  //   margin-bottom: $break-xxl;
+    
+  //   @include breakpoint(medium) {
+  //     margin-bottom: $break-xxxl;
+  //     margin-top: $break-xxxl;
+  //   }
+
+  //   & ~ .cennik__container {
+  //     margin-top: $break-xxl;
+      
+  //   }
+  // }
+}

@@ -1,0 +1,106 @@
+
+
+// -------------
+// HEADERS
+//--------------
+
+h2 {
+  // margin-top: $break-xl;
+  margin-bottom: $break-xl;
+  
+  @include breakpoint(medium) {
+    margin-bottom: $break-xxl;
+  }
+}
+h3 {
+  margin-top: $break-xxl;
+  margin-bottom: $break-xl;
+
+  @include breakpoint(medium) {
+    margin-top: $break-xxxl;
+    margin-bottom: $break-xxl;
+  }
+  
+  // @include breakpoint(xlarge) {
+  //   margin-top: $break-xxxxl;
+  //   margin-bottom: $break-xxxl;
+  // }
+}
+
+// Reduce h3 top padding if there is h2 before
+
+h2 + h3 {
+  margin-top: rem-calc(0);
+}
+ 
+// -------------
+// GENERAL SECTION STYLES
+//--------------
+
+.section,
+.hero {
+  background-color: $light-gray;
+  box-shadow: 0 6px 20px -10px $dark-gray;
+  margin-bottom: rem-calc(16);
+  padding: $break-xxl 0;
+
+}
+.section {
+  @include breakpoint(medium) {
+    margin-bottom: rem-calc(24);
+    padding-left: $break-md;
+    padding-right: $break-md;
+  }
+}
+
+.article {
+
+
+  &__container {
+    //  @include xy-grid(vertical);
+  }
+
+}
+
+// -------------
+// GENERAL LIST STYLES
+//--------------
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list__item {
+  padding-top: rem-calc(8);
+  padding-bottom: rem-calc(8);
+  //word-wrap: break-word;
+  //word-break: break-all;
+}
+
+// -------------
+// GENERAL SECTION TEXT SETTINGS
+//--------------
+.text-bold {
+  font-weight: bold;
+  margin-top: $break-xl;
+  
+  @include breakpoint(medium) {
+    margin-top: $break-xxxl;
+
+  }
+}
+
+p {
+  text-align: justify;
+
+}
+
+p, span, label, input, button, tr, li {
+
+  @include breakpoint(xlarge) {
+    font-size: 110%;
+  }
+
+}
+

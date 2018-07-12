@@ -1,0 +1,44 @@
+.open {
+
+  @include xy-grid;
+
+  .fi-mail,
+  .fi-telephone {
+    font-size: 84px;
+    color: $primary-color;
+  }
+
+  &__days {
+    text-align: center;
+    margin-top: 0;
+
+    @include breakpoint(medium) {
+      @include xy-cell(1 / 2);
+    }
+    
+    &:not(:last-child) {
+      margin-bottom: $break-md;
+      
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+      }
+    }
+    &:last-child {
+      border-top: 1px solid $dark-gray;
+      margin-top: $break-md;
+      
+      @include breakpoint(medium) {
+        margin-top: 0;
+        border-top: 0;
+      }
+    }
+
+    & > p {
+      text-align: center;
+    }
+
+    & > h3 {
+      margin-top: $break-l;
+    }
+  }
+}

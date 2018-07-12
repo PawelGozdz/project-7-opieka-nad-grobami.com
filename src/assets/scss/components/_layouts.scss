@@ -1,0 +1,45 @@
+.page-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.content-wrapper {
+  @include xy-grid-container();
+  position: relative;
+}
+
+.section {
+  @include xy-grid;
+  
+  &__container {
+    @include xy-cell();
+  }
+
+  @include breakpoint(xlarge) {
+    max-width: 850px;
+  }
+}
+
+.article {
+
+  &__container {
+    @include xy-cell(12, $breakpoint: small);
+  }
+}
+
+// LIST ITEMS
+.list {
+  @include xy-grid;
+  
+  &__item {
+    @include xy-cell(6, $breakpoint: small);
+    
+    @include breakpoint(medium) {
+      @include xy-cell(3);
+    }
+  }
+}
+
+
+
+

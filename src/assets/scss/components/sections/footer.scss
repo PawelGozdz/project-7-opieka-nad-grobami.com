@@ -1,0 +1,40 @@
+.footer {
+  background-color: $dark-gray;
+  color: $white;
+  padding: $break-md;
+
+  &__container {
+    @include xy-cell();
+    @include xy-grid;
+    flex-direction: column;
+    
+    border-left: 2px solid $primary-color;
+    padding-left: $break-sm;
+    
+    @include breakpoint(medium) {
+      flex-direction: row;
+      @include xy-cell();
+      justify-content: space-between;
+    }
+    
+    @include breakpoint(xlarge) {
+      padding-left: $break-xl;
+      @include xy-grid-container();
+    }
+  }
+
+  p {
+    text-align: left;
+
+    @include breakpoint(xlarge) {
+      &:last-child {
+        @include xy-cell();
+        text-align: center;
+      }
+    }
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

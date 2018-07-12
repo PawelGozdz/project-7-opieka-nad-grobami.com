@@ -1,0 +1,9 @@
+.list {
+
+  &__item {
+
+    &--plus {
+      @include circle('\002b', 32px);
+    } 
+  }
+}

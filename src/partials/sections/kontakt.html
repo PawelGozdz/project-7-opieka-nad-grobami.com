@@ -1,0 +1,39 @@
+
+<div class="section__container">
+  <{{section-heading}}>Kontakt</{{section-heading}}>
+
+  <form method="post" id="contact-form" action="assets/php/send.php" data-abide novalidate class="form">
+
+    <div data-adibe-error class="alert callout" style="display: none;">
+      <p><i class="fi-alert">Wystąpił jakś błąd. Spróbuj ponownie</i></p>
+    </div>
+
+    <div class="form__field-container">
+      <label class="form__label" for="name">
+        Twoje imię:
+        <input type="text" id="name" name="name">
+      </label>
+    </div>
+
+    <div class="form__field-container">
+      <label class="form__label" for="email">
+        Twój email:
+        <input type="email" id="email" name="email">
+      </label>
+    </div>
+    
+    <div class="form__field-container">
+      <label class="form__field-container" for="message">
+        Wiadomość:
+        <textarea name="message" id="message" cols="30" rows="3"></textarea>
+      </label>
+    </div>
+
+    <div class="form__field-container">
+      <input type="submit" value="Submit" class="button">
+    </div>
+
+  </form>
+    
+
+</div>

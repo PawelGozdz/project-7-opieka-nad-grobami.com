@@ -1,0 +1,48 @@
+.slides {
+  background-color: $primary-color;
+  color: $white;
+  padding: $break-md;
+  text-align: center;
+  height: auto;
+  margin-bottom: $break-sm;
+
+  &__container {
+    //height: auto;
+    @include xy-grid(vertical);
+    height: auto;
+  }
+
+  &__text {
+    margin-top: auto;
+    
+    @include xy-grid;
+    @include xy-cell();
+    align-self: center;
+    text-align: center;
+
+
+    @include breakpoint(medium) {
+      @include xy-cell(3/4);
+    }
+  }
+
+  &__person {
+    // margin: rem-calc(10) auto;
+    & > * {
+      padding: 3px 8px;
+    }
+  }
+  &__name {
+    background-color: $white;
+    //border: 2px solid $primary-color;
+    color: $primary-color;
+    font-weight: bold;
+    
+  }
+
+  &__city {
+    border: 2px solid $white;
+    color: $white;
+    font-weight: bold;
+  }
+}

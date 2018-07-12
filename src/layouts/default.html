@@ -1,0 +1,107 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="pl">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121486022-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121486022-1');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META NAME="author" CONTENT="RWD Strony Internetowe">
+    <META NAME="subject" CONTENT="Sprzątanie grobów">
+    <META NAME="Description" CONTENT="Całkowity zakres usług opieki nad grobami w powiatach starachowickim, skarżyskim i ostrowieckim. Pakiety jednorazowe i abonamentowe.">
+    <META NAME="Classification" CONTENT="Świadczymy usługi takie jak: mycie i sprzątanie grobów, sprzątanie po pogrzebie, składanie kwiatów, zapalanie zniczy, naprawy nagrobków,  odśnieżanie, naprawa i wymiana ławeczek, renowacja liter, pielęgnacja trawników oraz inne.">
+    <META NAME="Keywords" CONTENT="sprzątanie grobów, opieka nad grobami, mycie grobów, renowacja liter, znicze, kwiaty na groby">
+    <META NAME="Geography" CONTENT="Polska, Starachowice, ul. Owocowa 3">
+    <META NAME="Language" CONTENT="Polski">
+    <META NAME="Copyright" CONTENT="Agencja Reklamowa Impuls">
+    <META NAME="Designer" CONTENT="RWD Strony Internetowe">
+    <META NAME="Publisher" CONTENT="RWD Strony Internetowe">
+    <META NAME="distribution" CONTENT="Global">
+    <META NAME="Robots" CONTENT="INDEX,FOLLOW">
+    <META NAME="zipcode" CONTENT="27-200">
+    <META NAME="city" CONTENT="Starachowice">
+    <META NAME="country" CONTENT="Polska">
+
+      <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="{{root}}assets/img/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="{{root}}assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="{{root}}assets/img/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="{{root}}assets/img/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{root}}assets/img/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{root}}assets/img/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{root}}assets/img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{root}}assets/img/favicon-16.png">
+    <link rel="apple-touch-icon" href="{{root}}assets/img/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{root}}assets/img/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{root}}assets/img/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{root}}assets/img/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{root}}assets/img/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{root}}assets/img/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{root}}assets/img/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{root}}assets/img/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{root}}assets/img/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="assets/img/favicon-144.png">
+    <meta name="msapplication-config" content="assets/img/browserconfig.xml">
+    <!-- ****** faviconit.com favicons ****** -->
+
+    <TITLE>Sprzątanie, mycie, opieka nad grobami - Starachowice</TITLE>
+
+    <link rel="stylesheet" href="{{root}}assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org/",
+        "@type": "LocalBusiness",
+          "name": "Opieka Nad Grobami",
+        "branchOf": {
+          "@type": "Organization",
+          "email": "opieka.nad.grobami.st.ce@gmail.com",
+          "name": "Opieka Nad Grobami"
+        },
+          "image": "http://designandcode.pl/assets/img/opieka-nad-grobami-logo.png",
+        "areaServed": [
+          "Powiat starachowicki",
+          "Powiat ostrowiecki",
+          "Powiat skarżyski"
+        ],
+        "currenciesAccepted": "Złoty",
+        "openingHours": "08:00 - 17:00",
+        "priceRange": "Od 35zł",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Polska",
+          "addressLocality": "Starachowice",
+          "addressRegion": "Świętokrzyskie",
+          "postalCode": "27-200",
+          "streetAddress": "Owocowa 3",
+          "email": "opieka.nad.grobami.st.ce@gmail.com",
+          "telephone": "+48 696 583 739"
+        },
+        "email": "opieka.nad.grobami.st.ce@gmail.com",
+        "telephone": "+48 696 583 739"
+      }
+      </script>
+  </head>
+  <body>
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+    
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>
